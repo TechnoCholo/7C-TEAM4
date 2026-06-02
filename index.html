@@ -1,26 +1,179 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-sca  <style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skeletal System Educational Page</title>
+  <style>
+    html {
+      scroll-behavior: smooth; /* animación suave al navegar */
+    }
+
     body {
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ffffff, #f5f5dc); /* blanco y beige */
+      color: #4a2c2a; /* marrón suave */
+    }
+
+    nav {
+      background-color: #fffaf0;
       display: flex;
       justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f4f4f4;
+      padding: 15px;
+      border-bottom: 6px solid #d4a373;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/Human_bone_icon.png');
+      background-repeat: repeat-x;
+      background-size: 70px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    iframe {
-      width: 90%;
-      height: 90%;
-      border: none;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+    nav a {
+      background: linear-gradient(135deg, #f5deb3, #f0e68c);
+      color: #4a2c2a;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      display: block;
+      text-align: center;
+      line-height: 1.2;
+      box-shadow: 0 0 8px rgba(212,163,115,0.5);
+    }
+
+    nav a:hover {
+      background: linear-gradient(135deg, #f0e68c, #ffd580);
+      color: #fff;
+      transform: scale(1.05);
+      box-shadow: 0 0 12px rgba(255,200,150,0.8);
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+      min-height: 100vh;
+      border-bottom: 2px solid #d4a373;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/Human_bone_icon.png'),
+                        url('https://upload.wikimedia.org/wikipedia/commons/0/0b/Human_skull_icon.png');
+      background-repeat: repeat, repeat;
+      background-size: 100px, 130px;
+      background-position: center;
+      opacity: 0.95;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      color: #b34700;
+      text-shadow: 0 0 15px #ffd580;
+      margin-bottom: 20px;
+      border: 2px solid #d4a373;
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 15px;
+      background: rgba(255,255,255,0.9);
+      animation: glow 3s infinite alternate;
+    }
+
+    h1::before { content: "🦴 "; }
+    h1::after { content: " 🦴"; }
+
+    p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.6;
+      background: rgba(255,255,255,0.85);
+      padding: 15px;
+      border-radius: 10px;
+      border: 2px solid #d4a373;
+      box-shadow: 0 0 10px #ffd580;
+      color: #4a2c2a;
+      animation: slideUp 1.5s ease;
+    }
+
+    footer {
+      background-color: #fffaf0;
+      color: #b34700;
+      text-align: center;
+      padding: 20px;
+      border-top: 6px solid #d4a373;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/Human_bone_icon.png'),
+                        url('https://upload.wikimedia.org/wikipedia/commons/0/0b/Human_skull_icon.png');
+      background-repeat: repeat-x, repeat-x;
+      background-size: 70px, 90px;
+    }
+
+    /* Animaciones */
+    @keyframes glow {
+      from { box-shadow: 0 0 8px #ffd580; }
+      to { box-shadow: 0 0 20px #f0e68c; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 0.95; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
   </style>
 </head>
 <body>
-  <iframe src="https://canva.link/7xr8vqotunv2xev" allowfullscreen></iframe>
+  <nav>
+    <a href="#intro">🏠 Home</a>
+    <a href="#functions">Functions</a>
+    <a href="#types">Types</a>
+    <a href="#diseases">Diseases</a>
+    <a href="#facts">Fun Facts</a>
+  </nav>
+
+  <section id="intro">
+    <h1>Introduction</h1>
+    <p>The skeletal system is the framework of 206 bones that supports movement, protects organs, produces blood cells, and stores essential minerals and fats. It is divided into the axial skeleton (skull, spine, rib cage) and the appendicular skeleton (limbs, shoulders, hips).</p>
+  </section>
+
+  <section id="functions">
+    <h1>Functions of the Skeletal System</h1>
+    <p>The skeletal system provides support, protection, movement, mineral storage, and blood cell production. Bones act as levers for muscles, shield vital organs, and serve as reservoirs for calcium and phosphorus.</p>
+  </section>
+
+  <section id="types">
+    <h1>Types of Bones</h1>
+    <p>There are five main types of bones:<br>
+    - Long Bones (femur, humerus)<br>
+    - Short Bones (carpals, tarsals)<br>
+    - Flat Bones (skull, sternum)<br>
+    - Irregular Bones (vertebrae, sacrum)<br>
+    - Sesamoid Bones (patella)</p>
+  </section>
+
+  <section id="diseases">
+    <h1>Bone Diseases</h1>
+    <p>- <strong>Osteoporosis:</strong> reduced bone density, fragile bones.<br>
+       - <strong>Osteopenia:</strong> lower density than normal, precursor to osteoporosis.<br>
+       - <strong>Osteonecrosis:</strong> blood supply loss, bone tissue death.<br>
+       - <strong>Scoliosis:</strong> abnormal curvature of the spine.<br>
+       - <strong>Arthritis:</strong> inflammation of joints affecting bone movement.</p>
+  </section>
+
+  <section id="facts">
+    <h1>Fun Facts</h1>
+    <p>- The hyoid bone is the only bone not connected to others.<br>
+       - Small bones heal in 6–8 weeks.<br>
+       - About 1% of humans have 13 pairs of ribs.<br>
+       - In zero gravity, the spine elongates and people grow taller.<br>
+       - Bones are stronger than steel by weight!</p>
+  </section>
+
+  <footer>
+    © 2026 Skeletal System Educational Page - Warm & Huesuda Style
+  </footer>
 </body>
 </html>
