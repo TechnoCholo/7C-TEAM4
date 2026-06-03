@@ -1,179 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skeletal System Educational Page</title>
-  <style>
-    html {
-      scroll-behavior: smooth; /* animación suave al navegar */
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skeletal System</title>
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #ffffff, #f5f5dc); /* blanco y beige */
-      color: #4a2c2a; /* marrón suave */
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    nav {
-      background-color: #fffaf0;
-      display: flex;
-      justify-content: center;
-      padding: 15px;
-      border-bottom: 6px solid #d4a373;
-      background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/Human_bone_icon.png');
-      background-repeat: repeat-x;
-      background-size: 70px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+<style>
 
-    nav a {
-      background: linear-gradient(135deg, #f5deb3, #f0e68c);
-      color: #4a2c2a;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: bold;
-      padding: 10px 20px;
-      border-radius: 30px;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      display: block;
-      text-align: center;
-      line-height: 1.2;
-      box-shadow: 0 0 8px rgba(212,163,115,0.5);
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    nav a:hover {
-      background: linear-gradient(135deg, #f0e68c, #ffd580);
-      color: #fff;
-      transform: scale(1.05);
-      box-shadow: 0 0 12px rgba(255,200,150,0.8);
-    }
+html{
+    scroll-behavior:smooth;
+}
 
-    section {
-      padding: 60px 20px;
-      text-align: center;
-      min-height: 100vh;
-      border-bottom: 2px solid #d4a373;
-      background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/Human_bone_icon.png'),
-                        url('https://upload.wikimedia.org/wikipedia/commons/0/0b/Human_skull_icon.png');
-      background-repeat: repeat, repeat;
-      background-size: 100px, 130px;
-      background-position: center;
-      opacity: 0.95;
-      animation: fadeIn 2s ease-in-out;
-    }
+body{
+    font-family:'Poppins',sans-serif;
+    background:#eef6ff;
+    color:#1e3a5f;
+}
 
-    h1 {
-      color: #b34700;
-      text-shadow: 0 0 15px #ffd580;
-      margin-bottom: 20px;
-      border: 2px solid #d4a373;
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 15px;
-      background: rgba(255,255,255,0.9);
-      animation: glow 3s infinite alternate;
-    }
+/* NAVBAR */
 
-    h1::before { content: "🦴 "; }
-    h1::after { content: " 🦴"; }
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:18px;
+    background:rgba(255,255,255,0.95);
+    backdrop-filter:blur(10px);
+    box-shadow:0 2px 15px rgba(0,0,0,0.1);
+    z-index:1000;
+}
 
-    p {
-      max-width: 800px;
-      margin: auto;
-      font-size: 18px;
-      line-height: 1.6;
-      background: rgba(255,255,255,0.85);
-      padding: 15px;
-      border-radius: 10px;
-      border: 2px solid #d4a373;
-      box-shadow: 0 0 10px #ffd580;
-      color: #4a2c2a;
-      animation: slideUp 1.5s ease;
-    }
+nav a{
+    text-decoration:none;
+    color:#2563eb;
+    font-weight:600;
+    transition:.3s;
+}
 
-    footer {
-      background-color: #fffaf0;
-      color: #b34700;
-      text-align: center;
-      padding: 20px;
-      border-top: 6px solid #d4a373;
-      background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/Human_bone_icon.png'),
-                        url('https://upload.wikimedia.org/wikipedia/commons/0/0b/Human_skull_icon.png');
-      background-repeat: repeat-x, repeat-x;
-      background-size: 70px, 90px;
-    }
+nav a:hover{
+    color:#0ea5e9;
+    transform:translateY(-2px);
+}
 
-    /* Animaciones */
-    @keyframes glow {
-      from { box-shadow: 0 0 8px #ffd580; }
-      to { box-shadow: 0 0 20px #f0e68c; }
-    }
+/* HERO */
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 0.95; }
-    }
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:40px;
 
-    @keyframes slideUp {
-      from { transform: translateY(30px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-  </style>
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#3b82f6;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#2563eb;
+}
+
+/* SECTIONS */
+
+section{
+    padding:100px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:2.5rem;
+    color:#2563eb;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+/* FACTS */
+
+.facts{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.fact{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.fact h2{
+    font-size:2rem;
+    color:#2563eb;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+nav{
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+}
+
+</style>
 </head>
+
 <body>
-  <nav>
-    <a href="#intro">🏠 Home</a>
+
+<nav>
+    <a href="#intro">Home</a>
     <a href="#functions">Functions</a>
-    <a href="#types">Types</a>
+    <a href="#types">Bones</a>
     <a href="#diseases">Diseases</a>
-    <a href="#facts">Fun Facts</a>
-  </nav>
+    <a href="#facts">Facts</a>
+</nav>
 
-  <section id="intro">
-    <h1>Introduction</h1>
-    <p>The skeletal system is the framework of 206 bones that supports movement, protects organs, produces blood cells, and stores essential minerals and fats. It is divided into the axial skeleton (skull, spine, rib cage) and the appendicular skeleton (limbs, shoulders, hips).</p>
-  </section>
+<!-- HERO -->
 
-  <section id="functions">
-    <h1>Functions of the Skeletal System</h1>
-    <p>The skeletal system provides support, protection, movement, mineral storage, and blood cell production. Bones act as levers for muscles, shield vital organs, and serve as reservoirs for calcium and phosphorus.</p>
-  </section>
+<section class="hero" id="intro">
+    <div class="hero-content">
+        <h1>🦴 Skeletal System</h1>
+        <p>
+            Discover the amazing framework of the human body.
+            Learn about bones, their functions, diseases and fascinating facts.
+        </p>
 
-  <section id="types">
-    <h1>Types of Bones</h1>
-    <p>There are five main types of bones:<br>
-    - Long Bones (femur, humerus)<br>
-    - Short Bones (carpals, tarsals)<br>
-    - Flat Bones (skull, sternum)<br>
-    - Irregular Bones (vertebrae, sacrum)<br>
-    - Sesamoid Bones (patella)</p>
-  </section>
+        <a href="#functions" class="btn">
+            Explore
+        </a>
+    </div>
+</section>
 
-  <section id="diseases">
-    <h1>Bone Diseases</h1>
-    <p>- <strong>Osteoporosis:</strong> reduced bone density, fragile bones.<br>
-       - <strong>Osteopenia:</strong> lower density than normal, precursor to osteoporosis.<br>
-       - <strong>Osteonecrosis:</strong> blood supply loss, bone tissue death.<br>
-       - <strong>Scoliosis:</strong> abnormal curvature of the spine.<br>
-       - <strong>Arthritis:</strong> inflammation of joints affecting bone movement.</p>
-  </section>
+<!-- FUNCTIONS -->
 
-  <section id="facts">
-    <h1>Fun Facts</h1>
-    <p>- The hyoid bone is the only bone not connected to others.<br>
-       - Small bones heal in 6–8 weeks.<br>
-       - About 1% of humans have 13 pairs of ribs.<br>
-       - In zero gravity, the spine elongates and people grow taller.<br>
-       - Bones are stronger than steel by weight!</p>
-  </section>
+<section id="functions">
 
-  <footer>
-    © 2026 Skeletal System Educational Page - Warm & Huesuda Style
-  </footer>
+<h2 class="section-title">
+Functions of the Skeletal System
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&w=800&q=80">
+<div class="card-content">
+<h3>Support</h3>
+<p>
+The skeleton provides shape and support to the body.
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80">
+<div class="card-content">
+<h3>Protection</h3>
+<p>
+Bones protect vital organs like the brain, heart and lungs.
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80">
+<div class="card-content">
+<h3>Movement</h3>
+<p>
+Bones and muscles work together to create movement.
+</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- TYPES -->
+
+<section id="types">
+
+<h2 class="section-title">
+Types of Bones
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<div class="card-content">
+<h3>Long Bones</h3>
+<p>Femur, Tibia, Humerus.</p>
+</div>
+</div>
+
+<div class="card">
+<div class="card-content">
+<h3>Short Bones</h3>
+<p>Carpals and Tarsals.</p>
+</div>
+</div>
+
+<div class="card">
+<div class="card-content">
+<h3>Flat Bones</h3>
+<p>Skull, Sternum and Ribs.</p>
+</div>
+</div>
+
+<div class="card">
+<div class="card-content">
+<h3>Irregular Bones</h3>
+<p>Vertebrae and Sacrum.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- DISEASES -->
+
+<section id="diseases">
+
+<h2 class="section-title">
+Bone Diseases
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<div class="card-content">
+<h3>Osteoporosis</h3>
+<p>Reduced bone density and fragile bones.</p>
+</div>
+</div>
+
+<div class="card">
+<div class="card-content">
+<h3>Scoliosis</h3>
+<p>Abnormal curvature of the spine.</p>
+</div>
+</div>
+
+<div class="card">
+<div class="card-content">
+<h3>Arthritis</h3>
+<p>Inflammation of joints affecting movement.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- FACTS -->
+
+<section id="facts">
+
+<h2 class="section-title">
+Fun Facts
+</h2>
+
+<div class="facts">
+
+<div class="fact">
+<h2>206</h2>
+<p>Bones in an adult body.</p>
+</div>
+
+<div class="fact">
+<h2>6-8</h2>
+<p>Weeks for many fractures to heal.</p>
+</div>
+
+<div class="fact">
+<h2>1%</h2>
+<p>People have 13 pairs of ribs.</p>
+</div>
+
+<div class="fact">
+<h2>🦴</h2>
+<p>Bones are stronger than steel by weight.</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Skeletal System Educational Website
+</footer>
+
 </body>
 </html>
